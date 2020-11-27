@@ -1,0 +1,9 @@
+package software;
+
+public interface notification {
+
+default void CreateTemplate() {
+}
+default void UpdateTemplate(String newTemplate) {
+}
+}

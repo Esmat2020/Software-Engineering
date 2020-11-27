@@ -1,0 +1,28 @@
+package software;
+
+import java.util.Scanner;
+
+public class userInfo {
+	static String userName;
+	static String email;
+public void setUserName(String Setname) {
+		userName= Setname;
+	}
+public String GetUserName(String Getname) {	
+	System.out.println("enter your name");
+	Scanner userinput= new Scanner(System.in);
+	Getname= userinput.nextLine();
+	return Getname;
+	
+	}
+public String GetMail(String UserMail) {
+	System.out.println("enter your Email");
+	Scanner userinput= new Scanner(System.in);
+	UserMail= userinput.nextLine();
+	return UserMail;
+	
+}
+public void SetMail(String userMail) {	
+	email= userMail;
+}
+}

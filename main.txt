@@ -1,0 +1,105 @@
+package software;
+
+import java.util.Scanner;
+
+
+public class main {
+
+	public static void main(String[] args) 
+	{
+		userInfo i= new userInfo();
+		register r= new register();
+		forget f =new forget();
+		book m = new book();
+		cancel c = new cancel();
+		
+		String name= "";
+		String password="";
+		String email= " ";
+		String Fpassword="";
+		String item="";
+		
+		
+		//Main List
+		
+		System.out.println("Welcome in Booking Application");
+		System.out.println("for siggning up press : 1");
+		System.out.println("for logging in press : 2");
+		
+		Scanner in= new Scanner(System.in);
+		int choice=in.nextInt();
+		
+		if(choice == 1)
+		{
+			name=i.GetUserName( name);
+			i.setUserName(name);
+			password=i.GetUserPassword(password);
+			i.setUserPassword(password);
+			email=i.GetMail(email);
+			i.SetMail(email);
+			r.CreateTemplate();
+			System.out.println(r.template);
+			
+				
+		}
+		else if(choice == 2)
+		{
+			System.out.println("if you forget your password please enter 0 else press any number");
+			Scanner In= new Scanner(System.in);
+			int forget=in.nextInt();
+			if(forget != 0) {
+				
+				name=i.GetUserName( name);
+				i.setUserName(name);
+				password=i.GetUserPassword(password);
+				i.setUserPassword(password);
+			}
+			else {
+				Fpassword=f.getPass(Fpassword);
+				f.setPass(Fpassword);
+				f.CreateTemplate();
+				System.out.println(f.template);
+			}
+	}
+		while(true)
+		{
+			int count=1;
+		item=m.getItem(item);
+		m.setItem(item);
+		m.CreateTemplate();
+		System.out.println(m.template);
+		System.out.println("-----------------------------------");
+		System.out.println("if you need to book again please enter 1 else press any number");
+		Scanner In= new Scanner(System.in);
+		count=in.nextInt();
+		if(count == 1 )
+			continue;
+		else 
+			break;
+		
+		}
+		
+		System.out.println("if you want to cancel a book please enter 0 else press any number");
+		Scanner In= new Scanner(System.in);
+		int cancel=in.nextInt();
+		
+		while(cancel == 0)
+		{
+			int count2=1;
+			item=c.getItem(item);
+			c.setItem(item);
+			c.CreateTemplate();
+			System.out.println(c.template);
+			System.out.println("-----------------------------------");
+			System.out.println("if you want to cancel a book please enter 1 else press any number");
+			Scanner on= new Scanner(System.in);
+			count2=on.nextInt();
+			if(count2 == 1 )
+				continue;
+			else 
+				break;
+			
+		}
+		System.out.println("Thanks for using Booking Application");
+}
+}

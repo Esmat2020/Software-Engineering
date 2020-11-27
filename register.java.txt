@@ -1,0 +1,14 @@
+package software;
+
+public class register extends userInfo implements notification {
+	public String template;
+	@Override
+	public void CreateTemplate() {
+	template ="dear " + userName + " your " +  email + " has been activated";
+	}
+	@Override
+	public void UpdateTemplate(String newtemplate) {
+		this.template= newtemplate;
+		
+	}	
+}

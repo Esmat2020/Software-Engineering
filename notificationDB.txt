@@ -1,0 +1,8 @@
+package software;
+
+import java.util.ArrayList;
+
+public class notificationDB implements notification {
+	ArrayList<notification> db= new ArrayList<notification>();
+
+}

@@ -1,0 +1,28 @@
+package software;
+
+import java.util.Scanner;
+
+public class forget extends userInfo implements notification {
+private String newPassword;
+public String template;
+public void setPass(String setPass) {
+	newPassword= setPass;
+}
+public String getPass(String getPass) {	
+System.out.println("enter your new passwod");
+Scanner userinput= new Scanner(System.in);
+getPass= userinput.nextLine();
+return getPass;
+
+}
+@Override
+	public void CreateTemplate() {
+		template= "your password changed and now it is " + newPassword;
+	}
+@Override
+	public void UpdateTemplate(String newTemplate) {
+	this.template=newTemplate;
+	
+	}
+
+}
