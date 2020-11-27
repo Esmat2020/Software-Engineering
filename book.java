@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sw;
+package software;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Ayman
  */
-public class book extends userInfo implements notification{
+public class booking extends userInfo implements notification , notificationDB{
     String template;
     String item;
     
@@ -29,7 +29,7 @@ public class book extends userInfo implements notification{
 
     @Override
     public void CreateTemplate() {
-        template = "your booked "+item+ "successfully";
+        template = "Notification : you have booked "+item+ " successfully";
     }
 
     @Override

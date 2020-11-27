@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 
 public class main {
+	
+	private static Object db;
 
 	public static void main(String[] args) 
 	{
@@ -38,6 +40,7 @@ public class main {
 			email=i.GetMail(email);
 			i.SetMail(email);
 			r.CreateTemplate();
+			notificationDB.db.add(r.template);
 			System.out.println(r.template);
 			
 				
@@ -58,7 +61,12 @@ public class main {
 				Fpassword=f.getPass(Fpassword);
 				f.setPass(Fpassword);
 				f.CreateTemplate();
+				notificationDB.db.add(f.template);
 				System.out.println(f.template);
+				System.out.println(notificationDB.db);
+				notificationDB.db.remove(1);
+				System.out.println(notificationDB.db);
+
 			}
 	}
 		while(true)

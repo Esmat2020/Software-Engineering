@@ -2,7 +2,7 @@ package software;
 
 import java.util.Scanner;
 
-public class forget extends userInfo implements notification {
+public class forget extends userInfo implements notification , notificationDB {
 private String newPassword;
 public String template;
 public void setPass(String setPass) {
